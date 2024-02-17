@@ -23,8 +23,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html,
 body {
-  min-height: 100vh;
+  height: 100%;
   font-family: "Ubuntu", sans-serif;
 }
 form,
@@ -34,7 +36,7 @@ button {
 
 .main-container {
   border: 2px solid red;
-  height: 100vh;
+  height: inherit;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -45,7 +47,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 35vh;
+  height: 250px;
 }
 .navbar {
   margin-right: 20px;
@@ -73,24 +75,24 @@ nav {
 
 /* FORM GENERAL STYLE */
 .form-container {
-  height: 100%;
+  flex: 1;
 }
 
 .stp {
-  background: var(--magnolia);
-  height: 80%;
-  margin-bottom: 20px;
+  background: var(--lightgray);
+  min-height: 80%;
+  margin-bottom: 10px;
 }
 
 .form--content {
   border-radius: 5%;
   box-shadow: 2px 2px 4px var(--lightgray);
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--white);
-  width: 95%;
+  width: 85%;
   padding: 30px 25px 20px;
   margin: 0 auto;
 }
@@ -108,14 +110,12 @@ nav {
 .label {
   color: var(--Marine-blue);
   font-size: 0.9rem;
+  font-weight: 500;
   margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
 }
 
-.stp--1 label {
-  font-weight: 500;
-}
 .error {
   display: none;
   color: var(--Strawberry-red);
@@ -130,6 +130,7 @@ nav {
 }
 .stp--1 form input::placeholder {
   font-size: 0.8rem;
+  color: var(--coolgray);
   font-weight: 700;
 }
 .stp--1 form input:hover,
@@ -149,10 +150,10 @@ nav {
   margin-left: 70%;
   background: var(--Marine-blue);
   color: var(--white);
-  font-size: 1.1rem;
+  font-size: 1rem;
   border: none;
   border-radius: 10px;
-  padding: 0.8em;
+  padding: 0.6em;
 }
 
 @media (min-width: 768px) {
@@ -179,28 +180,22 @@ nav {
   .step {
     display: block;
     margin-left: 10px;
+    text-transform: uppercase;
   }
   .step-num {
-    text-transform: uppercase;
     font-size: 0.7rem;
     color: var(--lightgray);
     font-weight: 500;
   }
   .step-title {
-    text-transform: uppercase;
     font-size: 0.8rem;
     color: var(--alabaster);
     font-weight: 700;
   }
 
-  .form-container {
-    flex: 1;
-  }
-
   .stp {
     background: transparent;
-    height: 80%;
-    margin-bottom: 20px;
+    height: 90%;
   }
 
   .form--content {
