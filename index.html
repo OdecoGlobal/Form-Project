@@ -22,7 +22,7 @@
       <nav>
         <div class="navbar active">
           <div class="circle">1</div>
-          <div class="step step-1">
+          <div class="step-nav step-1">
             <p class="step-num">Step 1</p>
             <p class="step-title">Your info</p>
           </div>
@@ -30,7 +30,7 @@
 
         <div class="navbar">
           <div class="circle">2</div>
-          <div class="step step-2">
+          <div class="step-nav step-2">
             <p class="step-num">Step 2</p>
             <p class="step-title">Select plan</p>
           </div>
@@ -38,7 +38,7 @@
 
         <div class="navbar">
           <div class="circle">3</div>
-          <div class="step step-3">
+          <div class="step-nav step-3">
             <p class="step-num">Step 3</p>
             <p class="step-title">Add-ons</p>
           </div>
@@ -46,7 +46,7 @@
 
         <div class="navbar">
           <div class="circle">4</div>
-          <div class="step step-4">
+          <div class="step-nav step-4">
             <p class="step-num">Step 4</p>
             <p class="step-title">Summary</p>
           </div>
@@ -54,83 +54,127 @@
       </nav>
       <!-- Sidebar end -->
 
-      <!-- Step 1 start -->
-      <section class="form-container stp--1 hidden">
-        <div class="stp">
-          <div class="form--content">
-            <header>
-              <h2 class="form--heading">Personal info</h2>
-              <p class="form--subheading">
-                Please provide your name, email address, and phone number.
-              </p>
-            </header>
+      <section class="step-container">
+        <!-- Step 1 start -->
 
-            <form>
-              <div class="label">
-                <label for="name">Name</label>
-                <p class="error">This field is required</p>
-              </div>
-              <input
-                required
-                type="text"
-                id="name"
-                placeholder="e.g. Stephen King"
-              />
+        <div class="steps stp--1 hidden">
+          <div class="form--container">
+            <div class="form--content">
+              <header>
+                <h2 class="form--heading">Personal info</h2>
+                <p class="form--subheading">
+                  Please provide your name, email address, and phone number.
+                </p>
+              </header>
 
-              <div class="label">
-                <label for="name">Email Address</label>
-                <p class="error">This field is required</p>
-              </div>
+              <form>
+                <div class="label">
+                  <label for="name">Name</label>
+                  <p class="error">This field is required</p>
+                </div>
+                <input
+                  required
+                  type="text"
+                  id="name"
+                  placeholder="e.g. Stephen King"
+                />
 
-              <input
-                required
-                type="email"
-                id="name"
-                placeholder="e.g. stephenking@lorem.com"
-              />
+                <div class="label">
+                  <label for="name">Email Address</label>
+                  <p class="error">This field is required</p>
+                </div>
 
-              <div class="label">
-                <label for="name">Phone Number</label>
-                <p class="error">This field is required</p>
-              </div>
+                <input
+                  required
+                  type="email"
+                  id="name"
+                  placeholder="e.g. stephenking@lorem.com"
+                />
 
-              <input
-                required
-                type="tel"
-                id="name"
-                placeholder=" e.g. +1 234 567 890"
-              />
-            </form>
+                <div class="label">
+                  <label for="name">Phone Number</label>
+                  <p class="error">This field is required</p>
+                </div>
+
+                <input
+                  required
+                  type="tel"
+                  id="name"
+                  placeholder=" e.g. +1 234 567 890"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="button">
+            <button class="btn btn--next">Next Step</button>
           </div>
         </div>
-        <div class="button">
-          <button class="btn btn--next">Next Step</button>
-        </div>
-      </section>
 
-      <!-- Step 1 end -->
+        <!-- Step 1 end -->
 
-      <!-- Step 2 start -->
+        <!-- Step 2 start -->
 
-      <section class="form-container stp--2">
-        <div class="stp">
-          <div class="form--content">
-            <header>
-              <h2 class="form--heading">Select your plan</h2>
-              <p class="form--subheading">
-                You have the option of monthly or yearly billing.
-              </p>
-            </header>
+        <div class="steps stp--2 hidden">
+          <div class="form--container">
+            <div class="form--content">
+              <header>
+                <h2 class="form--heading">Select your plan</h2>
+                <p class="form--subheading">
+                  You have the option of monthly or yearly billing.
+                </p>
+              </header>
+              <div class="plan--container">
+                <div class="plan plan--1 active">
+                  <img
+                    src="./assets/images/icon-arcade.svg"
+                    alt="arcade Logo"
+                  />
+                  <div class="plan--content">
+                    <p class="plan--name">Arcade</p>
+                    <p class="plan--price monthly">$9/mo</p>
+                  </div>
+                </div>
+
+                <div class="plan plan--2">
+                  <img
+                    src="./assets/images/icon-advanced.svg"
+                    alt="advanced Logo"
+                  />
+                  <div class="plan--content">
+                    <p class="plan--name">Advanced</p>
+                    <p class="plan--price monthly">$12/mo</p>
+                  </div>
+                </div>
+
+                <div class="plan plan--3">
+                  <img src="./assets/images/icon-pro.svg" alt="Pro Logo" />
+                  <div class="plan--content">
+                    <p class="plan--name">Pro</p>
+                    <p class="plan--price monthly">$15/mo</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="toggle--container">
+                <p class="toggle--type monthly toggle--type_active">Monthly</p>
+
+                <div class="toggle-button__container">
+                  <input type="checkbox" class="check-input" id="toggle" />
+                  <label for="toggle" class="toggle--button"
+                    ><span class="toggle--circle"></span
+                  ></label>
+                </div>
+
+                <p class="toggle--type yearly">Yearly</p>
+              </div>
+            </div>
+          </div>
+          <div class="button">
+            <button class="btn btn--prev">Go Back</button>
+            <button class="btn btn--next">Next Step</button>
           </div>
         </div>
-        <div class="button">
-          <button class="btn btn--prev">Go back</button>
-          <button class="btn btn--next">Next Step</button>
-        </div>
       </section>
-
-      <!--   Arcade
-      $9/mo Advanced $12/mo Pro $15/mo Monthly Yearly Go Back Next Step -->
 
       <!-- Step 2 end -->
 
